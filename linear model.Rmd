@@ -40,6 +40,12 @@ summary.lm(model.1)
 The equation is SIMS = -4.095160 + 0.054563 * ARM 
 
 
+```{r}
+newData=data.frame(GRIP=94,ARM=88)
+predict.lm(model.1,newData,interval="prediction")
+```
+
+
 ## SIMS~GRIP Regression
 
 
