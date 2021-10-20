@@ -1,0 +1,26 @@
+---
+title: "LinearModel"
+author: "Kayleen Hernandez"
+date: "10/19/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_strength/data.txt",sep="",header=TRUE)  
+require(tidyverse)
+require(tigerstats)
+```
+
+# Introduction
+
+Then form three regression models; Model1 is SIMS~ARM, Model2 is SIMS~GRIP, and Model3 is SIMS~ARM+GRIP. For each model find a 95% prediction interval of SIMS given a value of 94  for GRIP and 88 for ARM. Compare Model1 with Model3 using anova.
+
+## SIMS~ARM Regression 
+
+
+## SIMS~GRIP Regression
+
+## SIMS~ARM+GRIP Rgression
+
+## MODEL COMPARISONS
