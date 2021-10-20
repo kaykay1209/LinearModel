@@ -18,6 +18,11 @@ Then form three regression models; Model1 is SIMS~ARM, Model2 is SIMS~GRIP, and 
 
 ## SIMS~ARM Regression 
 
+```{r}
+plot(SIMS~ARM,data=data)
+```
+
+The greater the pounds of force(ARM), the greater the simulation(SIMS)
 
 ## SIMS~GRIP Regression
 
