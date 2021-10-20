@@ -21,10 +21,27 @@ Then form three regression models; Model1 is SIMS~ARM, Model2 is SIMS~GRIP, and 
 ```{r}
 plot(SIMS~ARM,data=data)
 ```
+ggplot
 
 The greater the pounds of force(ARM), the greater the simulation(SIMS)
 
+
+```{r}
+cor(SIMS~ARM,data=data)
+```
+
+This number is the correlation between SIMS and ARM force. Correlation is a measure of the linear association between the two variables. 
+
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+
+The equation is SIMS = -4.095160 + 0.054563 * ARM 
+
+
 ## SIMS~GRIP Regression
+
 
 ## SIMS~ARM+GRIP Rgression
 
