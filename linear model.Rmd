@@ -75,7 +75,15 @@ The LWR and UPR are the 95% confidence intervals for predicted SIMS score ARM is
 ```{r}
 plot(SIMS~GRIP,data=data)
 ```
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=GRIP))
+```
 
+  
+```{r}
+newData=data.frame(GRIP=94,ARM=88)
+predict.lm(model.1,newData,interval="prediction")
+```
 
 ## SIMS~ARM+GRIP Rgression
 
