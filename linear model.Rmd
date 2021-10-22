@@ -21,10 +21,31 @@ Then form three regression models; Model1 is SIMS~ARM, Model2 is SIMS~GRIP, and 
 ```{r}
 plot(SIMS~ARM,data=data)
 ```
-ggplot
+
+
+
+
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
+```
+
+  
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+```{r}
+basicNN + geom_point() + geom_smooth(method=lm)
+```
+
+
+
 
 The greater the pounds of force(ARM), the greater the simulation(SIMS)
 
+This scatter plot shows the blue line which is an indication of a best linear fit to predict what an avergage sim response would be for any ARM strength. 
+
+the shaded part is the uncertainty of the blue line itself.
 
 ```{r}
 cor(SIMS~ARM,data=data)
@@ -45,8 +66,15 @@ newData=data.frame(GRIP=94,ARM=88)
 predict.lm(model.1,newData,interval="prediction")
 ```
 
+Fit is the predicted ARM score when you have anARM strenght of 88. 
+
+The LWR and UPR are the 95% confidence intervals for predicted SIMS score ARM is 88. 
 
 ## SIMS~GRIP Regression
+
+```{r}
+plot(SIMS~GRIP,data=data)
+```
 
 
 ## SIMS~ARM+GRIP Rgression
